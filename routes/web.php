@@ -19,10 +19,10 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::resource('tenders', TenderController::class)->names([
             'index' => 'tenders.index',
             'create' => 'tenders.create',
-            'store' => 'admin.tenders.store',
-            'edit' => 'admin.tenders.edit',
-            'update' => 'admin.tenders.update',
-            'destroy' => 'admin.tenders.destroy'
+            'store' => 'tenders.store',
+            'edit' => 'tenders.edit',
+            'update' => 'tenders.update',
+            'destroy' => 'tenders.destroy'
         ]);
     });
 });

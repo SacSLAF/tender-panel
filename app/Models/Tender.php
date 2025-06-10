@@ -16,4 +16,9 @@ class Tender extends Model
         'date_of_opening',
         'type',
     ];
+
+    // In your Tender model
+    protected $casts = [
+        'date_of_opening' => 'date',
+    ];
 }
