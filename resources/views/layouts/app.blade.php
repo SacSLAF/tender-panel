@@ -58,7 +58,7 @@
                     </a>
                     <div class="flex items-center px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg">
                         <div>
-                            <form method="POST" action="{{ route('admin.logout') }}">
+                            <form method="POST" action="{{ route('admin.logout') }}" class="logout-form">
                                 @csrf
                                 <button type="submit"
                                     class="flex items-center space-x-1 text-gray-600 hover:text-gray-900">
