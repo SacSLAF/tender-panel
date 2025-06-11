@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Admin; // Ensure you have the Admin model imported
 
 class AuthController extends Controller
 {
@@ -28,5 +29,10 @@ class AuthController extends Controller
     {
         Auth::guard('admin')->logout();
         return redirect()->route('admin.login');
+    }
+
+    public function index(){
+        $admins = Admin::all();
+        return view('admin.index',compact('admins'));
     }
 }

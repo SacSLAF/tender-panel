@@ -28,3 +28,13 @@ Route::prefix('admin')->name('admin.')->group(function () {
         ]);
     });
 });
+Route::middleware('auth:admin')->group(function () {
+    Route::resource('admin', AuthController::class)->names([
+        'index' => 'admin.index',
+        'create' => 'admin.create',
+        'store' => 'admin.store',
+        'edit' => 'admin.edit',
+        'update' => 'admin.update',
+        'destroy' => 'admin.destroy'
+    ]);
+});
