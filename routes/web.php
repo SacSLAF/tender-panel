@@ -28,7 +28,7 @@ Route::prefix('admin')->name('admin.')->group(function () {
         ]);
     });
 });
-Route::middleware('auth:admin')->group(function () {
+Route::middleware(['auth:admin', 'admin.super'])->group(function () {
     Route::resource('admin', AuthController::class)->names([
         'index' => 'admin.index',
         'create' => 'admin.create',
