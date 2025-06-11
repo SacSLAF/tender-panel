@@ -9,7 +9,7 @@
         <div class="flex items-center justify-between">
             <div>
                 <p class="text-sm font-medium text-gray-500">Total Users</p>
-                <h3 class="text-2xl font-bold text-gray-900 mt-1">1,256</h3>
+                <h3 class="text-2xl font-bold text-gray-900 mt-1">{{ $userCount }}</h3>
                 <p class="text-xs text-green-500 mt-2 flex items-center">
                     <svg class="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
