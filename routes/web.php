@@ -4,11 +4,13 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\TenderController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\FrontEndController;
 
 
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/web',[FrontEndController::class,'index'])->name('web');
 Route::prefix('admin')->name('admin.')->group(function () {
     Route::get('login', [AuthController::class, 'showLoginForm'])->name('login');
     Route::post('login', [AuthController::class, 'login']);
